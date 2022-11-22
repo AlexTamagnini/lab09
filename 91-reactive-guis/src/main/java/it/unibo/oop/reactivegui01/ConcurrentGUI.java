@@ -80,8 +80,9 @@ public final class ConcurrentGUI extends JFrame {
                     /*
                      * This is just a stack trace print, in a real program there
                      * should be some logging and decent error reporting
+                     * ex.printStackTrace();
                      */
-                    ex.printStackTrace();
+                    System.out.println(ex); // NOPMD: allowed as this is just an exercise
                 }
             }
         }
