@@ -45,7 +45,8 @@ public final class MultiThreadedListSumWithStreams implements SumList {
 
         @Override
         public void run() {
-            System.out.println("Working from position " + startpos + " to position " + (startpos + nelem - 1));
+            System.out.println("Working from position " + startpos // NOPMD: allowed as this is just an exercise
+                + " to position " + (startpos + nelem - 1)); 
             for (int i = startpos; i < list.size() && i < startpos + nelem; i++) {
                 this.res += this.list.get(i);
             }
@@ -88,7 +89,7 @@ public final class MultiThreadedListSumWithStreams implements SumList {
                 target.join();
                 joined = true;
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                e.printStackTrace(); // NOPMD: allowed as this is just an exercise
             }
         }
     }
